@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document33</title>
+    <style>
+        .space{
+            height: 130px;
+        }
+        .small {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        .medium {
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .large {
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .small>img {
+            width: 8%;
+            height: 8%;
+        }
+        .medium>img {
+            width: 16%;
+            height: 16%;
+        }
+        .large>img {
+            width: 24%;
+            height: 24%;
+        }
+        
+    </style>
+</head>
+
+<body id="background">
+
+
+
+    <center>
+        <h1 id="headline1">Moon</h1>
+        <button onclick="x1()">x1</button>
+        <button onclick="x2()">x2</button>
+        <button onclick="x3()">x3</button>
+        <button onclick="darkmode()">Darkmode</button>
+    </center>
+    
+    <div class='space'></div>
+
+    <div class="small">
+        <img id='moon1' src='kvart4 liten.png'>
+        <img id="moon2" src="halv4 liten.png">
+        <img id="moon3" src="hel4 liten.png">
+     </div>
+
+    <div class="medium">
+        <img id="moon4" src="kvart4 liten.png">
+        <img id="moon5" src="halv4 liten.png">
+        <img id="moon6" src="hel4 liten.png">
+    </div>
+    <div class="large">
+        <img id="moon7" src="kvart4 liten.png">
+        <img id="moon8" src="halv4 liten.png">
+        <img id="moon9" src="hel4 liten.png">
+    </div>
+
+
+    <script>
+
+        function x1() {
+
+             document.getElementsByClassName('small')[0].style.display="flex";
+             document.getElementsByClassName('medium')[0].style.display="none";
+             document.getElementsByClassName('large')[0].style.display="none";  
+             
+        }
+        function x2() {
+
+             document.getElementsByClassName('small')[0].style.display="none";
+             document.getElementsByClassName('medium')[0].style.display="flex";
+             document.getElementsByClassName('large')[0].style.display="none";   
+        }
+        function x3() {
+          
+             document.getElementsByClassName('small')[0].style.display="none";
+             document.getElementsByClassName('medium')[0].style.display="none";
+             document.getElementsByClassName('large')[0].style.display="flex";
+        }   
+        var redmode = false
+        function darkmode() {
+        if (redmode == false) {
+            document.getElementById('background').style.backgroundColor = 'black'
+            document.getElementById('headline1').style.color = 'red'
+            redmode = true
+        }
+        else {
+            document.getElementById('background').style.backgroundColor = 'white'
+            document.getElementById('headline1').style.color = 'black'
+            redmode = false
+        }
+
+    }
+        
+    </script>
+
+</body>
+
+</html>
